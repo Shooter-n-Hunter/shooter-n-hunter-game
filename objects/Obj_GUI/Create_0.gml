@@ -13,11 +13,11 @@ self.dialogoDelay = 0;
 self.dialogoAni = 5;
 
 background_map = ds_map_create();
-background_map[? layer_get_id("Bg_fundo_1")] = 0.0;
-background_map[? layer_get_id("Bg_fundo_2")] = 0.2;
-background_map[? layer_get_id("Bg_fundo_3")] = 0.4;
-background_map[? layer_get_id("Bg_fundo_4")] = 0.6;
-background_map[? layer_get_id("Bg_fundo_5")] = 0.8;
-background_map[? layer_get_id("Bg_fundo_6")] = 1.0;
+for (var i=0; i<5; i++)
+	background_map[? layer_get_id("Bg_fundo_" + string(i + 1))] = 1.0 - (0.1 * i);
+for (var i=4; i<9; i++)
+	background_map[? layer_get_id("Bg_fundo_" + string(i + 1))] = 0.5;
+	
+background_map[? layer_get_id("Bg_fundo_9")] = 0.0;
 
 alarm[0] = 60;

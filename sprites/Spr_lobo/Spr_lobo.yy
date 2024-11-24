@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"Lobo-Guará",
+    "path":"folders/Sprites/Lobo-Guará.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

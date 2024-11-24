@@ -28,7 +28,7 @@ if (global.estaCarregado and self.vida > 0 and global.tempo > 0) {
 		global.pontos += self.ponto;
 		global.tempo += 3;
 		global.onda -= 1;
-		var p = instance_create_depth(x, y, 0, Obj_pontos);
+		var p = instance_create_depth(x - (sprite_width/2), y, 0, Obj_pontos);
 		with (p) {
 			ponto = other.ponto;
 		}
