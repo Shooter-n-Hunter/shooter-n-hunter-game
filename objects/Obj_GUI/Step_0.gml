@@ -14,7 +14,7 @@ if (global.tempo <= 0) {
 }
 
 // Diálogo
-if (global.onda <= 0) {
+if (global.kills >= 10) {
 	var msgs = [
 		"Voce tem que parar com isso.",
 		"Onde voce arranjou essa arma?",
@@ -26,7 +26,8 @@ if (global.onda <= 0) {
 	self.dialogoExibir = "";
 	self.dialogoDelay = 240;
 	self.dialogoAni = 5;
-	global.onda = 10;
+	global.onda += 1;
+	global.kills = 0;
 }
 
 if (self.dialogoDelay > 0) {

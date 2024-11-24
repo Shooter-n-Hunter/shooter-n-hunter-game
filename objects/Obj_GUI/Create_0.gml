@@ -4,7 +4,8 @@ global.play = true;
 global.pontos = 0;
 global.municao = 10;
 global.tempo = 30;
-global.onda = 10;
+global.kills = 0;
+global.onda = 1;
 global.vidas = 3;
 
 self.dialogoTexto = "Nao atire nos animais!";
