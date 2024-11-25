@@ -1,12 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
-global.play = true;
+global.play = false;
 global.pontos = 0;
 global.municao = 10;
 global.tempo = 30;
 global.kills = 0;
 global.onda = 1;
 global.vidas = 3;
+
+self.tituloAlfa = 1.0;
 
 self.dialogoTexto = "Nao atire nos animais!";
 self.dialogoExibir = "";

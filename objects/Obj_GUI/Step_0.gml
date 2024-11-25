@@ -5,6 +5,10 @@ y = mouse_y;
 // Tempo
 if (global.play)
 	global.tempo -= 0.015
+else {
+	self.tituloAlfa -= 0.01;
+	if (self.tituloAlfa <= 0.0) self.tituloAlfa = 1.0;
+}
 if (global.tempo <= 0) {
 	self.dialogoTexto = "PARE!"
 	self.dialogoExibir = "";
@@ -16,11 +20,11 @@ if (global.tempo <= 0) {
 // Diálogo
 if (global.kills >= 10) {
 	var msgs = [
-		"Voce tem que parar com isso.",
-		"Onde voce arranjou essa arma?",
+		"Voce tem que parar\ncom isso!",
+		"Onde voce arranjou\nessa arma?",
 		"O IBAMA vai te pegar!",
 		"Maos ao alto!",
-		"A natureza vai se vingar!"
+		"A natureza vai se vingar!",
 	]
 	self.dialogoTexto = msgs[random(array_length(msgs))];
 	self.dialogoExibir = "";
@@ -38,6 +42,9 @@ if (self.dialogoDelay > 0) {
 	if (self.dialogoAni > 0)
 		self.dialogoAni -= 0.3;
 	self.dialogoDelay -= 1;
+	
+	if (self.dialogoDelay == 17)
+		self.dialogoAni = 5;
 }
 
 // Parallax

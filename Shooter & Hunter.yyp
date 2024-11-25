@@ -42,6 +42,7 @@
   "resources":[
     {"id":{"name":"Fon_GUI","path":"fonts/Fon_GUI/Fon_GUI.yy",},},
     {"id":{"name":"Fon_pontos","path":"fonts/Fon_pontos/Fon_pontos.yy",},},
+    {"id":{"name":"Fon_titulo","path":"fonts/Fon_titulo/Fon_titulo.yy",},},
     {"id":{"name":"Obj_bicho","path":"objects/Obj_bicho/Obj_bicho.yy",},},
     {"id":{"name":"Obj_cursor","path":"objects/Obj_cursor/Obj_cursor.yy",},},
     {"id":{"name":"Obj_GUI","path":"objects/Obj_GUI/Obj_GUI.yy",},},

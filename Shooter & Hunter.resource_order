@@ -24,6 +24,7 @@
   ],
   "ResourceOrderSettings":[
     {"name":"Fon_pontos","order":1,"path":"fonts/Fon_pontos/Fon_pontos.yy",},
+    {"name":"Fon_titulo","order":2,"path":"fonts/Fon_titulo/Fon_titulo.yy",},
     {"name":"Obj_bicho","order":2,"path":"objects/Obj_bicho/Obj_bicho.yy",},
     {"name":"Obj_cursor","order":1,"path":"objects/Obj_cursor/Obj_cursor.yy",},
     {"name":"Obj_pontos","order":3,"path":"objects/Obj_pontos/Obj_pontos.yy",},

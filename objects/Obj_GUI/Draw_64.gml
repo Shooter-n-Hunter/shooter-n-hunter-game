@@ -1,4 +1,9 @@
 /// @description textos e diálogos
+font_enable_effects(Fon_titulo, true, {
+	outlineEnable: true,
+	outlineDistance: 2,
+	outlineColour: c_black	
+});
 font_enable_effects(Fon_GUI, true, {
 	outlineEnable: true,
 	outlineDistance: 1,
@@ -6,10 +11,14 @@ font_enable_effects(Fon_GUI, true, {
 });
 if (!global.play) {
 	draw_set_color(c_white);
-	draw_set_font(Fon_GUI);
+	draw_set_font(Fon_titulo);
 	draw_text(50, 50, "Shoot & Hunter")
-	draw_text(50, view_hport[0] - 80, "Atire em qualquer lugar")
-	draw_text(50, view_hport[0] - 30, "UDF - 2024")
+	
+	draw_set_font(Fon_GUI);
+	draw_set_alpha(sin(self.tituloAlfa));
+	draw_text(view_wport[0]/2, view_hport[0] - 80, "Atire em qualquer lugar")
+	draw_set_alpha(1.0);
+	draw_text(50, view_hport[0] - 40, "UDF - 2024")
 } else {
 	var pad_x = 10;
 	var pad_y = 10;
@@ -29,7 +38,7 @@ if (!global.play) {
 		var diw = 300;
 		var dih = 150;
 		var dix = view_wport[0] - diw - 10;
-		var diy = view_hport[0] - dih - 30 + (sin(self.dialogoAni) * 5);
+		var diy = view_hport[0] - dih - 30 + (sin(self.dialogoAni) * 10);
 		draw_roundrect_color(dix, diy, dix + diw, diy + dih, c_white, c_white, 0);
 		font_enable_effects(Fon_GUI, false);
 		draw_set_color(c_black);

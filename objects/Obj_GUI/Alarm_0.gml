@@ -1,3 +1,5 @@
 /// @description criar bicho
 instance_create_depth(0, 0, 0, Obj_bicho);
-alarm[0] = 60;
+var tempoGerar = 60 - (global.onda * 5)
+if (tempoGerar < 10) tempoGerar = 10;
+alarm[0] = tempoGerar;
