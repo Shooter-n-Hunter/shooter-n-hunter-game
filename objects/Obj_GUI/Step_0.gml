@@ -25,6 +25,7 @@ if (global.kills >= 10) {
 		"O IBAMA vai te pegar!",
 		"Maos ao alto!",
 		"A natureza vai se vingar!",
+		"Tu vai pro xilindró!"
 	]
 	self.dialogoTexto = msgs[random(array_length(msgs))];
 	self.dialogoExibir = "";
