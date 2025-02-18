@@ -1,6 +1,10 @@
 /// @description parallax e diálogo
-x = mouse_x;
-y = mouse_y;
+
+// Créditos
+if (mouse_x > 5 and mouse_x < 45 and mouse_y > 25 and mouse_y < 35)
+	self.creditos = true;
+else
+	self.creditos = false;
 
 // Tempo
 if (global.play)
@@ -25,7 +29,7 @@ if (global.kills >= 10) {
 		"O IBAMA vai te pegar!",
 		"Maos ao alto!",
 		"A natureza vai se vingar!",
-		"Tu vai pro xilindró!"
+		"Tu vai pro xilindro!"
 	]
 	self.dialogoTexto = msgs[random(array_length(msgs))];
 	self.dialogoExibir = "";

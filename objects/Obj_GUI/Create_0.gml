@@ -8,6 +8,7 @@ global.kills = 0;
 global.onda = 1;
 global.vidas = 3;
 
+self.creditos = false
 self.tituloAlfa = 1.0;
 
 self.dialogoTexto = "Nao atire nos animais!";
