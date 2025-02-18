@@ -7,7 +7,7 @@ font_enable_effects(Fon_pontos, true, {
 draw_set_color(c_white);
 draw_set_font(Fon_pontos);
 draw_set_alpha(image_alpha);
-draw_text(x - 50, y, self.ponto);
+draw_text(x - 10, y, self.ponto);
 draw_set_alpha(1);
 
 if (self.estaSumindo)

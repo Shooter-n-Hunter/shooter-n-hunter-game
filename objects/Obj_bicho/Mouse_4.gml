@@ -28,7 +28,7 @@ if (global.estaCarregado and self.vida > 0 and global.tempo > 0) {
 		global.pontos += self.ponto;
 		global.tempo += round(self.ponto/100);
 		global.kills += 1;
-		var p = instance_create_depth(x - (sprite_width/2), y, 0, Obj_pontos);
+		var p = instance_create_depth(mouse_x, mouse_y - 10, 0, Obj_pontos);
 		with (p) {
 			ponto = other.ponto;
 		}

@@ -50,7 +50,6 @@ if (self.dialogoDelay > 0) {
 		self.dialogoAni -= 0.3;
 		
 	self.dialogoDelay -= 1;
-	show_debug_message(self.dialogoDelay)
 	if (self.dialogoDelay == 17)
 		self.dialogoAni = 5;
 }
