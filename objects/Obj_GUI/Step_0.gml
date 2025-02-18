@@ -7,18 +7,20 @@ else
 	self.creditos = false;
 
 // Tempo
-if (global.play)
+if (global.play and global.tempo > 0.0)
 	global.tempo -= 0.015
 else {
 	self.tituloAlfa -= 0.01;
 	if (self.tituloAlfa <= 0.0) self.tituloAlfa = 1.0;
 }
-if (global.tempo <= 0) {
-	self.dialogoTexto = "PARE!"
+
+if (global.tempo <= 0 and self.dialogoDelay == 0) {
+	self.dialogoTexto = "PARE!\nVoce fez " + string(global.pontos) + " pontos!\nAgora vamos para\na cadeia!"
 	self.dialogoExibir = "";
-	self.dialogoDelay = 240;
+	self.dialogoDelay = 400;
 	self.dialogoAni = 5;
-	global.play = false;
+	
+	alarm[1] = 399;
 }
 
 // Diálogo
@@ -46,8 +48,9 @@ if (self.dialogoDelay > 0) {
 	}
 	if (self.dialogoAni > 0)
 		self.dialogoAni -= 0.3;
+		
 	self.dialogoDelay -= 1;
-	
+	show_debug_message(self.dialogoDelay)
 	if (self.dialogoDelay == 17)
 		self.dialogoAni = 5;
 }

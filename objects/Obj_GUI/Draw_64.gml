@@ -19,9 +19,11 @@ if (!global.play) {
 	draw_text(50, 120, "Creditos")
 	draw_set_color(c_white);
 	
-	draw_set_alpha(sin(self.tituloAlfa));
-	draw_text(view_wport[0]/2 - (40), view_hport[0] - 80, "Atire em qualquer lugar")
-	draw_set_alpha(1.0);
+	if (!self.creditos) {
+		draw_set_alpha(sin(self.tituloAlfa));
+		draw_text(view_wport[0]/2 - 100, view_hport[0] - 80, "Atire em qualquer lugar")
+		draw_set_alpha(1.0);
+	}
 	
 	if (self.creditos) {
 		var _margin_txt = 30;

@@ -3,7 +3,7 @@
 global.play = false;
 global.pontos = 0;
 global.municao = 10;
-global.tempo = 30;
+global.tempo = 10;
 global.kills = 0;
 global.onda = 1;
 global.vidas = 3;
@@ -23,5 +23,3 @@ for (var i=4; i<9; i++)
 	background_map[? layer_get_id("Bg_fundo_" + string(i + 1))] = 0.5;
 	
 background_map[? layer_get_id("Bg_fundo_9")] = 0.0;
-
-alarm[0] = 60;

@@ -5,4 +5,6 @@ if (!global.play){
 	self.dialogoExibir = "";
 	self.dialogoDelay = 400;
 	self.dialogoAni = 5;
+	
+	alarm[0] = 60;
 }
