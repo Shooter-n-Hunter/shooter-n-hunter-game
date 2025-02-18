@@ -43,8 +43,8 @@ if (!global.play) {
 
 	draw_set_color(c_white);
 	draw_set_font(Fon_GUI);
-	draw_text(pad_x, pad_y, "Pontos: " + string(global.pontos));
-	draw_text(pad_x, pad_y + 20, "Vidas: " + string(global.vidas));
+	draw_text(pad_x, pad_y, "Recorde: " + string(global.recorde));
+	draw_text(pad_x, pad_y + 20, "Pontos: " + string(global.pontos));
 
 	if (global.tempo > 5)
 		draw_text(pad_x, pad_y + 40, "Tempo: " + string(round(global.tempo)));

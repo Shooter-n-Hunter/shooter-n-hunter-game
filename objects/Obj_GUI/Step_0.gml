@@ -15,7 +15,16 @@ else {
 }
 
 if (global.tempo <= 0 and self.dialogoDelay == 0) {
-	self.dialogoTexto = "PARE!\nVoce fez " + string(global.pontos) + " pontos!\nAgora vamos para\na cadeia!"
+	if (global.pontos > global.recorde) {
+		self.dialogoTexto = "Voce bateu o recorde\n de " + string(global.recorde) + " com\n" + string(global.pontos) + " pontos!\nAgora vamos para\na cadeia!"
+		global.recorde = global.pontos;
+		
+		ini_open("save.ini");
+		ini_write_real("save_unico", "recorde", global.recorde);
+		ini_close();
+	} else {
+		self.dialogoTexto = "PARE!\nVoce fez " + string(global.pontos) + " pontos!\nAgora vamos para\na cadeia!"
+	}
 	self.dialogoExibir = "";
 	self.dialogoDelay = 400;
 	self.dialogoAni = 5;

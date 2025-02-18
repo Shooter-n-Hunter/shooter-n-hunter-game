@@ -1,12 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+ini_open("save.ini");
+global.recorde = ini_read_real("save_unico", "recorde", 1000);
+ini_close();
+
 global.play = false;
 global.pontos = 0;
 global.municao = 10;
 global.tempo = 30;
 global.kills = 0;
 global.onda = 1;
-global.vidas = 3;
 
 self.creditos = false
 self.tituloAlfa = 1.0;
